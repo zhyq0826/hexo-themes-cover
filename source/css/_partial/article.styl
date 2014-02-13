@@ -2,7 +2,7 @@ icon-size = 32px
 icon-gap = 25px
 
 article
-  margin-bottom 40px
+  margin 20px 0 40px 0
   &.page
     padding-left 20px
     .icon
@@ -108,15 +108,29 @@ article
       margin-bottom 5px
       display block
       line-height 1
+      float right
 
     .title
       font-weight normal
       font-size 35px
-      margin: 30px 0px
+      margin: 10px 0px
       color rgb(37, 143, 184)
       a
-        color color-font
         color color-link
+        &:hover
+          color color-link
+          text-decoration none
+
+        &.comment-link
+          &:before
+            content '\f075'
+
+    .categories, .tags
+      position relative
+      margin-bottom 5px
+      a, i 
+        color color-meta
+      a  
         &:hover
           color color-link
           text-decoration none
@@ -185,13 +199,13 @@ article
         margin-top 0
 
     h1, h2
-      font-weight normal
+      font-weight bold
       padding-bottom 10px
       margin-top 20px
 
 
     h3, h4, h5, h6
-      font-weight normal
+      font-weight bold
 
     img, video
       max-width 100%
@@ -259,13 +273,9 @@ article
         color color-link
         text-decoration none
       &:before
-        font 1.1em font-icon
         padding-right 10px
         vertical-align middle
 
-      &.more-link
-        &:before
-          content '\f054'
 
       &.comment-link
         &:before
@@ -273,25 +283,4 @@ article
 
     .categories, .tags
       position relative
-      padding-left 25px
       margin 5px 0
-      &:before
-        position absolute
-        font 1.1em font-icon
-
-    .categories
-      &:before
-        content '\f07b'
-        top 2px
-        left 1px
-
-    .tags
-      &:before
-        content '\f02b'
-        top 3px
-        left 2px
-
-    .addthis
-      margin-top 15px
-      iframe
-        margin-top 0

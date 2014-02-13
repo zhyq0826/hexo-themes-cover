@@ -1,13 +1,14 @@
 menu:
-  博客: /
-  存档: /archives
-  那些“坑”: /works
-  关于: /about
+  Home: /
+  Archives: /archives
 
 widgets:
 - search
 
-
+cover:
+  enable: true
+  url: http://ww1.sinaimg.cn/large/6cea169fjw1edgyzma1xcj21kw16ohba.jpg
+   
 excerpt_link: Read More
 
 twitter:
@@ -25,7 +26,7 @@ addthis:
 
 fancybox: true
 
-google_analytics: UA-37439567-4
+google_analytics: UA-36877105-X
 rss:
 
 comment_provider: duoshuo
@@ -39,17 +40,12 @@ facebook:
 
 # Duoshuo comment
 duoshuo:
-  short_name: moo123
+  short_name: your_name
 
-society:
-  enable: true
-  github: https://github.com/yunlzheng
-  weibo: http://weibo.com/503error
-  google_plug: http://www.google.com
+social:
+  github: https://github.com/your_name
+  weibo: http://weibo.com/your_name
 
-#About Page
-about:
-  name:
 
 auto_change:
-  emable: true
+  enable: true
