@@ -26,7 +26,7 @@ addthis:
 
 fancybox: true
 
-google_analytics: UA-36877105-1
+google_analytics: UA-36877105-X
 rss:
 
 comment_provider: duoshuo
@@ -40,12 +40,11 @@ facebook:
 
 # Duoshuo comment
 duoshuo:
-  short_name: daisygao
+  short_name: your_name
 
 social:
-  github: https://github.com/daisygao
-  weibo: http://weibo.com/mousang
-  google_plus: 
+  github: https://github.com/your_name
+  weibo: http://weibo.com/your_name
 
 auto_change:
   enable: true
