@@ -11,3 +11,7 @@
     <h1 class="title"><%= item.title %></h1>
   <% } %>
 <% } %>
+<time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%- full_date(item.date, config.full_format) %></a></time>
+<%- partial('category') %>
+<%- partial('tag') %>
+<div class="clear"></div>

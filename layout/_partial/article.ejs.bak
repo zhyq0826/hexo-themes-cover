@@ -6,6 +6,7 @@
     <header>
       <% if (item.layout != 'page'){ %>
       <%- partial('post/title') %>
+      <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%- full_date(item.date, config.full_format) %></a></time>
       <% } %>
     </header>
     <div class="entry">
@@ -18,7 +19,7 @@
     <footer>
       <% if (index){ %>
         <div class="alignleft">
-            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><i class="fa fa-chevron-right"></i><%= theme.excerpt_link %></a>
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
         </div>
         <% if (item.comment && config.disqus_shortname){ %>
           <div class="alignleft">
@@ -32,13 +33,17 @@
           </div>
         <% } %>
       <% } else { %>
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
           <%- partial('post/share') %>
-          <div class="clearfix"></div>
-          <%- partial('_partial/pagination', {article: true}) %>
       <% } %>
       <div class="clearfix"></div>
     </footer>
   </div>
 </article>
+
+<% if (!index){ %>
+  <div id="profile"></div>
+<% } %>
 
 <%- partial('comment') %>

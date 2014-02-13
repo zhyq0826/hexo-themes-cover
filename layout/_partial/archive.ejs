@@ -7,7 +7,7 @@ if (page.archive){
   else title = __('archive_a');
 }
 %>
-<h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><%= title %></h2>
+<h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><i class="fa fa-<% if (page.tag){ %>tag<% } else if (page.category){ %>folder-open<% } else { %>archive<% }%>"></i><%= title %></h2>
 
 <% page.posts.each(function(item){ %>
     <div class="archive">

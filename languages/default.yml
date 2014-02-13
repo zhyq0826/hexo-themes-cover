@@ -5,6 +5,8 @@ tagcloud: Tag Cloud
 tweets: Tweets
 prev: Prev
 next: Next
+newer: Newer
+older: Older
 comment: Comments
 archive_a: Archives
 archive_b: Archives: %s

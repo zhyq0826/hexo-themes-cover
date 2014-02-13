@@ -1,24 +1,35 @@
-# Writing
+# Cover
 
-Hexo主题writing
-
-基于[light](https://github.com/tommy351/hexo-theme-light)的个人博客主题
+A chic Hexo theme with facebook-like cover photo. Forked from [Writing](https://github.com/yunlzheng/hexo-themes-writing).
 
 ## Demo
 
-![screenshot](https://raw.github.com/yunlzheng/hexo-themes/release/writing/source/css/img/themes-writing.png)
+[demo site](http://daisygao.com)
 
+Index page - cover, with social site links integrated:
+![](http://ww2.sinaimg.cn/large/6cea169fjw1edhzrl42srj21400jnk2r.jpg)
+
+Index page - blog:
+![](http://ww1.sinaimg.cn/large/6cea169fjw1edhzsngsyjj213l0jmtbu.jpg)
+
+Post page, with pagination, share module and comment module integrated:
+![](http://ww1.sinaimg.cn/large/6cea169fjw1edhzude2koj21400jn40v.jpg)
+
+## Features
+  - Dynamically-resized facebook-like cover photo displayed on index page, backed by [Anystretch](https://github.com/danmillar/jquery-anystretch).  
+  - Mobile-optimized by using Twitter bootstrap.
+  - Dynamically-fixed nav-bar design.
+  - Beautiful profile design with logo, social site links.
+  - Duoshuo comment widget and Jiathis share widget integrated (CSS-hack involved!), friendly for Chinese users.
+  - Newer and older posts pagination support.
 
 ## Install
 
-Execute the following command and modify `theme` in `_config.yml` to `writing`.
+Execute the following command and modify `theme` in `_config.yml` to `cover`.
 
 ```
-git@github.com:yunlzheng/hexo-themes.git themes/writing
-```
-
-```
-git checkout release/writing
+cd your-hexo-dir
+git clone https://github.com/daisygao/hexo-themes-cover.git themes/cover
 ```
 
 ## Update
@@ -26,7 +37,7 @@ git checkout release/writing
 Execute the following command to update new.
 
 ```
-cd themes/writing
+cd themes/cover
 git pull
 ```
 
@@ -34,19 +45,18 @@ git pull
 
 Default config:
 
-``` yaml
+```
 menu:
-  博客: /
-  存档: /archives
-  关于: /about
+  Home: /
+  Archives: /archives
 
 widgets:
 - search
-- recent_posts
-- category
-- tag
 
-
+cover:
+  enable: true
+  url: http://ww1.sinaimg.cn/large/6cea169fjw1edgyzma1xcj21kw16ohba.jpg
+   
 excerpt_link: Read More
 
 twitter:
@@ -56,10 +66,15 @@ twitter:
 
 addthis:
   enable: true
+  pubid:
+  facebook:
+  twitter:
+  google: true
+  pinterest:
 
 fancybox: true
 
-google_analytics:
+google_analytics: UA-36877105-X
 rss:
 
 comment_provider: duoshuo
@@ -73,33 +88,14 @@ facebook:
 
 # Duoshuo comment
 duoshuo:
-  short_name: moo123
+  short_name: your_name
 
-society:
+social:
+  github: https://github.com/your_name
+  weibo: http://weibo.com/your_name
+
+
+auto_change:
   enable: true
-  github: https://github.com/yunlzheng
-  weibo: http://weibo.com/503error
-  google_plug: http://www.google.com
 
-#About Page
-about:
-  name:
 ```
-
-- **menu** - 导航菜单项
-- **widget** - 侧边栏工具
-- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
-- **addthis** - 加网分享按钮
-  - **enable** - 是否启用加网分享
-- **fancybox** - Enable [Fancybox]
-- **google_analytics** - Google Analytics ID
-- **rss** - RSS subscription link (change if using Feedburner)
--**duoshuo**: 国内还是用多说来的比较稳定
-  -**short_name**: 在多说注册的short_name 
-
-## Features
-   
-* 可选disqus/多说第三方评论
-*  更富交互性的导航 
-
-以此纪念逝去的[writing.io](https://github.com/chloerei/writings)  
