@@ -59,10 +59,7 @@ cover:
    
 excerpt_link: Read More
 
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
+full_format: 'ddd, MMM D YYYY, h:mm:ss a'
 
 addthis:
   enable: true
@@ -79,12 +76,6 @@ rss:
 
 comment_provider: duoshuo
 
-# Facebook comment
-facebook:
-  appid: 123456789012345
-  comment_count: 5
-  comment_width: 840
-  comment_colorscheme: light
 
 # Duoshuo comment
 duoshuo:

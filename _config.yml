@@ -11,10 +11,7 @@ cover:
    
 excerpt_link: Read More
 
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
+full_format: 'ddd, MMM D YYYY, h:mm:ss a'
 
 addthis:
   enable: true
@@ -38,6 +35,7 @@ duoshuo:
 social:
   github: https://github.com/your_name
   weibo: http://weibo.com/your_name
+  google_plus: 
 
 auto_change:
   enable: true
