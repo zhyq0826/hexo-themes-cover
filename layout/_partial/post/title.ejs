@@ -1,3 +1,4 @@
+<time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%- full_date(item.date, theme.full_format) %></a></time>
 <% if (item.link){ %>
   <% if (item.title){ %>
     <h1 class="title"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
@@ -11,7 +12,6 @@
     <h1 class="title"><%= item.title %></h1>
   <% } %>
 <% } %>
-<time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%- full_date(item.date, theme.full_format) %></a></time>
 <%- partial('category') %>
 <%- partial('tag') %>
 <div class="clear"></div>
