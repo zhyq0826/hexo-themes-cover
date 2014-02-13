@@ -47,5 +47,9 @@ social:
   weibo: http://weibo.com/mousang
   google_plus: 
 
+social:
+  github: https://github.com/your_name
+  weibo: http://weibo.com/your_name
+
 auto_change:
   enable: true
