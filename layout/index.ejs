@@ -18,4 +18,6 @@
   <%- partial('_partial/article', {item: item, index: true}) %>
 <% }); %>
 
+<%- partial('_partial/pagination', {article: false}) %>
+
 <%- js(['js/jquery.anystretch.min.js', 'js/cover.js']) %>
