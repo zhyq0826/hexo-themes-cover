@@ -1,5 +1,6 @@
 menu:
   Home: /
+  Projects: /categories/Projects
   Archives: /archives
 
 widgets:
@@ -23,18 +24,18 @@ addthis:
 
 fancybox: true
 
-google_analytics: UA-36877105-X
+google_analytics: UA-36877105-1
 rss:
 
 comment_provider: duoshuo
 
 # Duoshuo comment
 duoshuo:
-  short_name: your_name
+  short_name: daisygao
 
 social:
-  github: https://github.com/your_name
-  weibo: http://weibo.com/your_name
+  github: https://github.com/daisygao
+  weibo: http://weibo.com/mousang
   google_plus: 
 
 auto_change:

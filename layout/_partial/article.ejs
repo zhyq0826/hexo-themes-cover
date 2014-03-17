@@ -27,8 +27,10 @@
         <% } %>
         <% if (theme.comment_provider == "duoshuo"){ %>
           <div class="alignright"> 
-            <span class="ds-thread-count" data-thread-key="<%- config.root %><%- item.path%>">&nbsp;
-            </span>
+            <a href="<%- item.permalink %>#comment" class="comment-link">
+              <i class="fa fa-comments"></i><span class="ds-thread-count" data-thread-key="<%- config.root %><%- item.path%>">&nbsp;
+              </span>
+            </a>
           </div>
         <% } %>
       <% } else { %>
