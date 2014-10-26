@@ -6,7 +6,7 @@ widgets:
 - search
 
 cover:
-  enable: true
+  enable: false
   url: http://ww1.sinaimg.cn/large/6cea169fjw1edgyzma1xcj21kw16ohba.jpg
    
 excerpt_link: Read More
