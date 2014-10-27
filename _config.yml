@@ -1,17 +1,19 @@
 menu:
   Home: /
   Archives: /archives
+  About: /about
 
 widgets:
 - search
+- category 
 
 cover:
-  enable: false
+  enable: true
   url: http://ww1.sinaimg.cn/large/6cea169fjw1edgyzma1xcj21kw16ohba.jpg
    
 excerpt_link: Read More
 
-full_format: 'ddd, MMM D YYYY, h:mm:ss a'
+full_format: 'MMM Do YYYY'
 
 addthis:
   enable: true
@@ -30,11 +32,11 @@ comment_provider: duoshuo
 
 # Duoshuo comment
 duoshuo:
-  short_name: your_id
+  short_name: singleride
 
 social:
-  github: https://github.com/your_id
-  weibo: http://weibo.com/your_id
+  github: https://github.com/zhyq0826
+  weibo: http://weibo.com/lowtone
   google_plus: 
 
 auto_change:
