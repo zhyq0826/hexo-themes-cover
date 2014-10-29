@@ -8,21 +8,10 @@ if (page.archive){
 }
 %>
 <h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><i class="fa fa-<% if (page.tag){ %>tag<% } else if (page.category){ %>folder-open<% } else { %>archive<% }%>"></i><%= title %></h2>
-<% if(page.archive) { %>
-	<% site.categories.each(function(item){%>
-		<div class="archive" >
-	        <div class="categories">
-				  	<i class="fa fa-folder-open"></i>
-				    <a href="<%- config.root %><%- item.path %>"><%= item.name%></a>
-		    </div>
-		</div>
-	<% }) %>
-<% } %>
 
-<% if (!page.archive) { %>
  <% page.posts.each(function(item){ %>
-    <div class="archive" >
-	<article  class="<%= item.layout%>"
+    <div class="archive<% if (page.category) { %> category-archive <% } %>" >
+	<article  class="<%= item.layout%>">
 		<header>
 		  <h1 class="title"><a style="font-size:18px" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
 	  		<time datetime="<%= item.date.toDate().toISOString() %>">
@@ -30,7 +19,7 @@ if (page.archive){
 			  	<%= item.date.format(config.date_format) %>
 			</time>
 		  </h1>
-		  <!-- <% if (!page.category) { 
+		  <% if (!page.category) { 
 		  	if (item.categories && item.categories.length){
 			  var cats = [];
 			  item.categories.forEach(function(cat){
@@ -55,18 +44,24 @@ if (page.archive){
 			    <%- tags.join(', ') %>
 			  </div>
 			<% } 
-		  } %> -->
+		  } %>
 		</header>
-		   <div class="entry">
+		 <% if (page.category) { %>
+		    <div class="entry">
 		      <% if (item.excerpt){ %>
-		        <%- item.excerpt %> ...
+		        <%- item.excerpt %>
 		      <% } else { %>
 		        <%- item.content %>
 		      <% } %>
 		    </div>
+		    <footer>
+		        <div class="alignleft">
+		            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><i class="fa fa-chevron-right"></i><%= theme.excerpt_link %></a>
+		        </div>
+	    	</footer>
+		 <% } %>
 	</article>
     </div>
 <% }); %>
 
-<% } %>
 <%- partial('pagination', {article: false}) %>

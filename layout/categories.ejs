@@ -1,0 +1,13 @@
+
+<% site.categories.each(function(item){%>
+    <h2 class="archive-title"><i class="fa fa-folder"></i>分类</h2>
+    <div class="archive" style="margin-top:30px" >
+        <div class="categories category-summary">
+                <i class="fa fa-folder-open"></i>
+                <a href="<%- config.root %><%- item.path %>">
+                    <%= item.name%>
+                    <small>(<%= item.posts.length %>)</small>
+                </a>
+        </div>
+    </div>
+<% }) %>
