@@ -1,5 +1,5 @@
 
-<%- js(['js/jquery.imagesloaded.min.js', 'js/gallery.js', '//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js']) %>
+<%- js(['js/jquery.imagesloaded.min.js', 'js/gallery.js', '//cdn.staticfile.org/twitter-bootstrap/3.1.0/js/bootstrap.min.js']) %>
 
 <% if (config.disqus_shortname){ %>
 <script type="text/javascript">
@@ -47,7 +47,7 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 <% } %>
 
 <% if (theme.comment_provider == "duoshuo" ) { %>
-    
+
     <script type="text/javascript">
       var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
     (function() {
@@ -55,7 +55,7 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
       ds.type = 'text/javascript';ds.async = true;
       ds.src = 'http://static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0] 
+      (document.getElementsByTagName('head')[0]
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
@@ -63,21 +63,20 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 <% }%>
 
 <script type="text/javascript">
-  
+
   $(function(){
 
     $('h1.title').hover(
-      function() {      
+      function() {
         $(this).stop().animate(
           {'marginLeft': '10px'}, 200
-        );   
-      }, 
-      function() {       
-        $(this).stop().animate({'marginLeft': '0px'}, 200);      
-      
-    });   
+        );
+      },
+      function() {
+        $(this).stop().animate({'marginLeft': '0px'}, 200);
+
+    });
 
   });
 
 </script>
-
