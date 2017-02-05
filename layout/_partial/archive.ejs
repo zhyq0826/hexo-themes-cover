@@ -13,7 +13,7 @@ if (page.archive){
     <div class="archive<% if (page.category) { %> category-archive <% } %>" >
 	<article  class="<%= item.layout%>">
 		<header>
-		  <h1 class="title"><a style="font-size:18px" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
+		  <h1 class="title"><a style="<% if(!page.category) { %> font-size:18px <% } %>" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
 	  		<time datetime="<%= item.date.toDate().toISOString() %>">
 			  	<!-- <a href="<%- config.root %><%- item.path %>"></a>  -->
 			  	<%= item.date.format(config.date_format) %>
