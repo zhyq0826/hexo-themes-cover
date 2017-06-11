@@ -10,10 +10,10 @@ if (page.archive){
 <h2 class="archive-title<% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><i class="fa fa-<% if (page.tag){ %>tag<% } else if (page.category){ %>folder-open<% } else { %>archive<% }%>"></i><%= title %></h2>
 
  <% page.posts.each(function(item){ %>
-    <div class="archive<% if (page.category) { %> category-archive <% } %>" >
+    <div class="archive" >
 	<article  class="<%= item.layout%>">
 		<header>
-		  <h1 class="title"><a style="<% if(!page.category) { %> font-size:18px <% } %>" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
+		  <h1 class="title"><a style="font-size: 18px" href="<%- config.root %><%- item.path %>"><%= item.title %></a>
 	  		<time datetime="<%= item.date.toDate().toISOString() %>">
 			  	<!-- <a href="<%- config.root %><%- item.path %>"></a>  -->
 			  	<%= item.date.format(config.date_format) %>
@@ -46,7 +46,7 @@ if (page.archive){
 			<% } 
 		  } %>
 		</header>
-		 <% if (page.category) { %>
+		 <!-- <% if (page.category) { %>
 		    <div class="entry">
 		      <% if (item.excerpt){ %>
 		        <%- item.excerpt %>
@@ -59,7 +59,7 @@ if (page.archive){
 		            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><i class="fa fa-chevron-right"></i><%= theme.excerpt_link %></a>
 		        </div>
 	    	</footer>
-		 <% } %>
+		 <% } %> -->
 	</article>
     </div>
 <% }); %>
