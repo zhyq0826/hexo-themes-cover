@@ -34,6 +34,8 @@ rss:
 # Duoshuo comment
 duoshuo:
   short_name: singleride
+disqus_shortname: true
+netease: true
 
 social:
   github: https://github.com/zhyq0826
